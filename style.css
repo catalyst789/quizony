@@ -1,0 +1,484 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.788);
+}
+
+.container {
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(240, 240, 240, 0.788);
+}
+a {
+  text-decoration: none;
+}
+nav {
+  position: fixed;
+  z-index: 9999999999999999;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 7%;
+  background-color: rgb(231, 231, 231);
+  border-top: 0.1px solid rgb(194, 194, 194);
+  border-bottom: 0.1px solid rgb(194, 194, 194);
+}
+nav a {
+  text-decoration: none;
+}
+
+
+
+.drop-down-catgs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: absolute;
+  opacity: 0;
+  top: 75%;
+  width: 335px;
+  height: 400px;
+  background-color: #ffff;
+}
+nav a:hover{
+  color: black !important;
+}
+.drop-down-catgs .heading {
+  margin-top: 15px;
+  margin-left: 10px;
+  font-weight: 600;
+}
+.drop-down-catgs a{
+  display: block;
+  margin-left: 10px;
+}
+.drop-menu-links-spac{
+  margin-top: 8px;
+}
+.drop-down-catgs .drop-down-quizzes{
+  width: 150px;
+  height: 200px;
+  margin-left: 10px;
+  /* background-color: aqua; */
+}
+
+
+.drop-down-catgs .drop-down-stories{
+  width: 150px;
+  height: 200px;
+  /* background-color: green; */
+}
+.drop-down-catgs .drop-down-populartags{
+  width: 150px;
+  height: 180px;
+  margin-left: 10px;
+
+  /* background-color: rgb(58, 49, 180); */
+}
+
+.drop-down-create{
+  position: absolute;
+  top: 75%;
+  left: 41%;
+  width: 150px;
+  height: 150px;
+  background-color: #ffff;
+  opacity: 0;
+
+}
+.drop-down-create a{
+  display: block;
+  margin: 10px;
+  font-weight: 600;
+}
+
+nav .logo {
+  width: 120px;
+  height: 30px;
+  margin-left: 150px;
+  background-image: url(https://www.quizony.com/static/img/quizony_logo_black.png);
+  background-position: center;
+  background-size: cover;
+}
+nav .logo img{
+  opacity: 0;
+}
+
+nav .menu-center {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  /* background-color: khaki; */
+  margin-left: 250px;
+}
+nav .menu-right {
+  width: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  /* background-color: rgb(119, 118, 104); */
+  margin-left: 300px;
+}
+nav .menu-center a {
+  color: grey;
+}
+nav .menu-right a {
+  color: grey;
+}
+nav .menu-center img {
+  width: 30px;
+  height: 30px;
+}
+
+.contents {
+  display: flex;
+  width: 100%;
+  min-height: 93%;
+}
+
+.left {
+  margin-left: 150px;
+  width: 45%;
+  height: 100%;
+  margin-top: 80px;
+  /* background-color: rgb(207, 206, 196); */
+}
+.left .title {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: xx-large;
+}
+.quiz-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 95%;
+  margin-top: 10px;
+  /* background-color: blanchedalmond; */
+}
+.left .quiz-box .box {
+  width: 330px;
+  min-height: 330px;
+  background-color: white;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.puzzle-image {
+  width: 330px;
+  height: 231px;
+  background-image: url(https://images.unsplash.com/photo-1605311245500-225d5244f1c0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+  background-position: center;
+  background-size: cover;
+}
+.quiz-enter {
+  margin-left: 250px;
+  margin-top: 10px;
+  border: none;
+  background-color: rgba(0, 128, 0, 0.753);
+  color: #fff;
+  width: 60px;
+  height: 20px;
+  cursor: pointer;
+}
+.post-time {
+  margin-top: 170px;
+  margin-left: 10px;
+  background: rgba(128, 128, 128, 0.705);
+  font-weight: 600;
+  border: none;
+  width: 90px;
+  height: 30px;
+}
+
+.puzzle-info {
+  width: 330px;
+  height: 99px;
+}
+.puzzle-info .puzzle-title {
+  text-align: center;
+  font-weight: 600;
+  /* font-size: 18px; */
+  margin-top: 10px;
+}
+.puzzle-info .puzzle-detail {
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0.6;
+}
+
+.post-actions{
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 330px;
+}
+.post-act-img{
+    width: 20px;
+    height: 20px;
+}
+
+.right {
+  margin-left: 120px;
+  margin-top: 80px;
+  width: 25%;
+  min-height: 100%;
+  /* background-color: rgb(145, 151, 153); */
+}
+.categories {
+  width: 300px;
+  height: 250px;
+  background-color: rgb(182, 182, 182);
+}
+.categories .sub-category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 25px;
+  height: 50px;
+  text-align: center;
+  background-color: #ffff;
+  border: 0.1px solid rgba(0, 0, 0, 0.13);
+}
+
+.all-categories {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 250px;
+  background-color: #ffff;
+  margin-top: 10px;
+}
+.sub-catgs {
+  border: 0.1px solid rgba(0, 0, 0, 0.144);
+  padding: 4.5px;
+  cursor: pointer;
+}
+
+.right .heading {
+  font-size: 25px;
+  margin-top: 35px;
+  margin-left: 55px;
+}
+
+.top-quizes {
+  width: 300px;
+  height: 550px;
+  /* background-color: rgb(129, 2 00, 228); */
+  margin-top: 10px;
+}
+.top-quizes .top-quiz {
+  display: flex;
+  width: 300px;
+  height: 120px;
+  background-color: #ffff;
+  box-shadow: 0 0 10px rgba(0, 0, 133, 0);
+  margin-top: 8px;
+}
+
+.top-quizes .top-quiz img {
+  width: 130px;
+  height: 120px;
+}
+.top-quizes .top-quiz .ques {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.story-genres {
+  display: flex;
+  flex-wrap: wrap;
+  width: 271px;
+  height: 200px;
+  margin-top: 10px;
+  background-color: #ffff;
+}
+.right button {
+  border: none;
+  background: linear-gradient(to right, rgb(174, 0, 255), rgb(89, 0, 255));
+  color: #ffff;
+  width: 200px;
+  font-size: 25px;
+  border-radius: 10px;
+  height: 50px;
+  margin-top: 50px;
+  margin-left: 35px;
+}
+.right button:hover{
+  background: linear-gradient(to right, rgb(89, 0, 255), rgb(174, 0, 255));
+  cursor: pointer;
+
+}
+.popular-tags {
+  display: flex;
+  flex-wrap: wrap;
+  width: 256px;
+  height: 200px;
+  margin-top: 10px;
+  background-color: #ffff;
+}
+hr {
+  width: 500px;
+  margin: 30px auto;
+  opacity: 0.3;
+}
+footer {
+  text-align: center;
+}
+
+
+
+/* making responsive */
+@media only screen and (max-width: 360px) {
+  nav {
+    position: fixed;
+    z-index: 99999999999;
+    flex-direction: column;
+  }
+  nav .menu-center{
+    opacity: 0;
+  }
+  nav .menu-right{
+    opacity: 0;
+  }
+  nav .logo{
+    position: absolute;
+    left:2%;
+    top: 20%;
+  }
+  nav .logo img{
+    position: absolute;
+    top: 20%;    
+    left: 205%;
+    opacity: 1;
+    width: 22px;
+    height: 22px;
+  }
+ .contents{
+   flex-direction: column;
+ }
+ .contents .right{
+  margin-left:160px;
+ }
+ .contents .left .title{
+ text-align: center;
+ width: 360px;
+ }
+ .contents .right .heading {
+   width: 360px;
+ }
+ footer{
+   width: 360px;
+   margin-left: 150px;
+   font-size: smaller;
+ }
+}
+
+@media only screen and (max-width: 415px) {
+  nav {
+    position: fixed;
+    z-index: 99999999999;
+    flex-direction: column;
+  }
+  nav .menu-center{
+    opacity: 0;
+  }
+  nav .menu-right{
+    opacity: 0;
+  }
+  nav .logo{
+    position: absolute;
+    left:2%;
+    top: 20%;
+  }
+  nav .logo img{
+    position: absolute;
+    top: 20%;    
+    left: 240%;
+    opacity: 1;
+    width: 22px;
+    height: 22px;
+  }
+ .contents{
+   flex-direction: column;
+   align-items: center;
+ }
+ .contents .right{
+  margin-left:160px;
+ }
+ .contents .left .title{
+ text-align: center;
+ width: 411px;
+ }
+ .contents .right .heading {
+   width: 411px;
+ }
+ footer{
+   width: 411px;
+   margin-left: 150px;
+   font-size: smaller;
+ }
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    position: fixed;
+    z-index: 99999999999;
+    flex-direction: column;
+  }
+  nav .menu-center{
+    opacity: 0;
+  }
+  nav .menu-right{
+    opacity: 0;
+  }
+  nav .logo{
+    position: absolute;
+    left:2%;
+    top: 20%;
+  }
+  nav .logo img{
+    position: absolute;
+    top: 20%;    
+    left: 205%;
+    opacity: 1;
+    width: 22px;
+    height: 22px;
+  }
+ .contents{
+   flex-direction: column;
+ }
+ .contents .right{
+  margin-left:160px;
+ }
+ .contents .left .title{
+ text-align: center;
+ width: 360px;
+ }
+ .contents .right .heading {
+   width: 360px;
+ }
+ footer{
+   width: 360px;
+   margin-left: 150px;
+   font-size: smaller;
+ }
+}
+
